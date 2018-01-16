@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--自定义输入框-->
+    <declare-styleable name="InputLayoutView">
+        <attr name="orginalImageView" format="reference"/>
+        <attr name="inputImageView" format="reference"/>
+        <attr name="inputType" format="integer"/>
+        <attr name="maxLine"/>
+        <attr name="maxLength" format="integer"/>
+        <attr name="orginalLineColor" format="color"/>
+        <attr name="inputLineColor" format="color"/>
+        <attr name="inputHint" format="string"/>
+    </declare-styleable>
+
+    <attr name="maxLine" format="integer"/>
+
+</resources>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <com.veken.edittextchangeview.InputLayoutView
+        android:id="@+id/rl_user"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="50dp"
+        android:gravity="center_vertical"
+        app:inputHint="请输入手机号"
+        app:inputImageView="@mipmap/ic_phone_pre"
+        app:maxLength="11"
+        app:maxLine="1"
+        app:inputType="3"
+        app:orginalLineColor="#cccccc"
+        app:inputLineColor="#399ae4"
+        app:orginalImageView="@mipmap/ic_phone">
+
+    </com.veken.edittextchangeview.InputLayoutView>
+
+    <com.veken.edittextchangeview.InputLayoutView
+        android:id="@+id/rl_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:gravity="center_vertical"
+        app:inputHint="请输入密码"
+        app:inputImageView="@mipmap/ic_lock_pre"
+        app:inputType="2"
+        app:maxLine="1"
+        app:orginalImageView="@mipmap/ic_lock">
+
+    </com.veken.edittextchangeview.InputLayoutView>
+
+    <TextView
+        android:id="@+id/tv_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="账号"/>
+
+    <TextView
+        android:id="@+id/tv_pwd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="密码"/>
+
+</LinearLayout>
