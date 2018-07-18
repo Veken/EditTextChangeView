@@ -1,8 +1,12 @@
-package com.veken.edittextchangeview;
+package com.veken.inputlayoutview;
 
+import android.annotation.SuppressLint;
+import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Color;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.text.Editable;
 import android.text.InputFilter;
 import android.text.InputType;
@@ -44,6 +48,10 @@ public class InputLayoutView extends RelativeLayout {
     private int orginalLineColor;
     //输入后的下划线颜色
     private int inputLineColor;
+    //EditTextHintColor
+    private int hintColor;
+    //EditTextColor
+    private int textColor;
 
 
     public InputLayoutView(Context context) {
@@ -59,6 +67,7 @@ public class InputLayoutView extends RelativeLayout {
         init(context, attrs);
     }
 
+    @SuppressLint("ResourceType")
     private void init(Context context, AttributeSet attrs) {
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.InputLayoutView);
         //初始化控件
@@ -101,6 +110,8 @@ public class InputLayoutView extends RelativeLayout {
         inputImageResource = typedArray.getResourceId(R.styleable.InputLayoutView_inputImageView, 0);
         orginalLineColor = typedArray.getColor(R.styleable.InputLayoutView_orginalLineColor, Color.parseColor("#cccccc"));
         inputLineColor = typedArray.getColor(R.styleable.InputLayoutView_inputLineColor, Color.parseColor("#399ae4"));
+        hintColor = typedArray.getColor(R.styleable.InputLayoutView_hintColor,Color.parseColor("#cccccc"));
+        textColor = typedArray.getColor(R.styleable.InputLayoutView_textColor,Color.parseColor("#000000"));
         inputType = typedArray.getInt(R.styleable.InputLayoutView_inputType,0);
         maxLength = typedArray.getInt(R.styleable.InputLayoutView_maxLength, 32);
         maxLine = typedArray.getInt(R.styleable.InputLayoutView_maxLine, 1);
@@ -126,6 +137,10 @@ public class InputLayoutView extends RelativeLayout {
         editText.setFilters(new InputFilter[]{new InputFilter.LengthFilter(maxLength)});
         //输入框提示内容
         editText.setHint(inputHint);
+        //输入框提示内容颜色
+        editText.setHintTextColor(hintColor);
+        //输入框输入内容后颜色
+        editText.setTextColor(textColor);
         //设置输入框无背景
         editText.setBackground(null);
         //默认图片
