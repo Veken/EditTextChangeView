@@ -4,9 +4,9 @@ EditText监听事件
 
 ![效果图](https://github.com/Veken/EditTextChangeView/raw/master/screenshot/GIF.gif)</br> 
 
-##使用方式
+## 使用方式
 
-####1.在 build.gradle 中添加依赖
+#### 1.在 build.gradle 中添加依赖
 ```
     compile 'com.veken:edittextchangeview:1.0.1'
 
